@@ -21,6 +21,4 @@ Route::get('/getSoup', function(){
     }
 }); 
 
-Route::post('/postSoup', 'soupController@post_soup'); 
-
-Route::post('/getResults', 'soupController@getResults'); 
+Route::get('/getResults', 'soupController@getResults'); 
