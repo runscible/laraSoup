@@ -18,6 +18,8 @@ Route::get('/', function () {
 Route::get('/getSoup', function(){
     if(Request::ajax()){
         return 'anda hasta acá :D'; 
+    }else{
+        return ':D';
     }
 }); 
 

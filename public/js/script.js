@@ -17,6 +17,11 @@ $(document).ready(function () {
         var send_soup_data = 'soupArray='+soup_data; 
         
         $.get('/getResults', {soupArray: soup_data}, function(data){
+            console.log(data);
+            $("#found_").html(data);  
+        }); 
+
+        $.get('/getSoup', function(data){
             console.log(data); 
         }); 
         
