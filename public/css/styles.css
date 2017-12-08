@@ -70,6 +70,7 @@ html, body {
     text-align: center;
     font-size: 35px;  
     word-wrap: break-word;
+    text-overflow: ellipsis
 
      
 }

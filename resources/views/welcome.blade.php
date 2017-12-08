@@ -20,13 +20,16 @@
     <div class="container"> 
         <div class="row">
         <div class="col-md-6">
-        <input type="hidden" name="_token" value="{{ csrf_token() }}">
-        <input type="text" id="input_soup">
+        <span>len char</span>
+        <input type="text" id="len_char">
         <br>
-        
+        <span>len row</span>
+        <input type="text" id="len_row">
+        <br>
         <button id="send" type"button" class="btn btn-primary">send</button>
         </div>
         <div class="col-md-6"  id="marc_"></div>            
+            <div id="marc_2"></div>
         </div>
         <br>
         <span>coincidencias encontradas </span>
@@ -34,8 +37,5 @@
         <br>
         <div class="jumbotron col-md-8" id="found_"></div>
         </div>
-        <h1>
-       
-       </h1>  
     </body>
 </html>
