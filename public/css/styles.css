@@ -61,14 +61,13 @@ html, body {
 }
 
 #marc_{
-    padding: 65px;
+    padding: 0px;
     height: auto;
     border-style: solid; 
     border-color: rgb(32, 30, 30);  
     width: 200px; 
     margin: 10px; 
     text-align: center;
-    font-size: 35px;  
     word-wrap: break-word;
     text-overflow: ellipsis
 
@@ -76,6 +75,9 @@ html, body {
 }
 #found_{
     border-style: double;  
+    word-wrap: break-word;
+    text-overflow: ellipsis
+
 }
 
 *{

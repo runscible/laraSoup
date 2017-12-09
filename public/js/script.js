@@ -19,7 +19,10 @@ $(document).ready(function () {
                     url: '/getResults', 
                     data: 'len_char='+len_char+'&len_row='+len_row, 
                     success: function(data){
-                        console.log(data); 
+                        parsed_data = JSON.parse(data); 
+                        console.log(parsed_data.coincidencias); 
+                        $("#marc_").html(parsed_data.coincidencias); 
+                        $("#found_").html(parsed_data.result); 
                     }, 
                     error: function(data){
                         console.log(data); 

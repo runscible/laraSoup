@@ -29,10 +29,10 @@
         <button id="send" type"button" class="btn btn-primary">send</button>
         </div>
         <div class="col-md-6"  id="marc_"></div>            
-            <div id="marc_2"></div>
+            
         </div>
         <br>
-        <span>coincidencias encontradas </span>
+        <span>sopa generada </span>
         <span id="result"></span>
         <br>
         <div class="jumbotron col-md-8" id="found_"></div>

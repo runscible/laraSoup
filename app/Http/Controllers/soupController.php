@@ -122,8 +122,18 @@ function get_results_soup($len_char, $len_row){
            endif;
        endfor;      
    endfor;
-   return $counter_diagonal_down_left.' '.$counter_diagonal_up_left;
-}
+   return   '{ "result": '.json_encode($results_soup).', '.
+            '"coincidencias": ['.
+            '"coincidencias_horizontales : '.$counter_horizontal_results.'", '.
+            '"coindencias_horizontales_invertidas: '.$counter_horizontal_results_invert.'", '. 
+            '"coincidencias_verticales: '.$counter_vertical_results.'", '. 
+            '"coincidencias_verticales_invertidas: '.$counter_horizontal_results_invert.'", '. 
+            '"coincidencias_diagonal_superior_derecha: '.$counter_diagonal_up_right.'", '. 
+            '"coindencias_diagonal_superior_izquierda: '.$counter_diagonal_up_left.'", '.
+            '"coincidencias_diagonal_inferior_derecha: '.$counter_diagonal_down_right.'", '.
+            '"coincidencias_diagonal_inferior_izquierda: '.$counter_diagonal_down_left.'"]}';
+            
+        }
 
 
   $get_results = get_results_soup($len_row, $len_char); 
