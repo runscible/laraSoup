@@ -73,7 +73,7 @@ html, body {
      
 }
 #found_{
-    border-style: double;  
+    border-style:double;  
     word-wrap: break-word;
     text-overflow: ellipsis
 
