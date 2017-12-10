@@ -10,10 +10,10 @@ $(document).ready(function () {
         $("#d_d_l").empty();
         $("#found_").empty();
 
-        
+
         var len_char = $("#len_char").val();
         var len_row = $("#len_row").val();  
-        //var send_soup_data = 'soupArray='+soup_data; 
+        
             console.log(len_char);
             console.log(len_row);
             

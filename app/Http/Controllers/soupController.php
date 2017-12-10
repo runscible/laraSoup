@@ -28,7 +28,7 @@ public function getResults(Request $request){
 
    function get_soup($len_char, $len_row){
        $array_soup = array();       
-       for($j = 0 ; $j < 100 ; $j++): 
+       for($j = 0 ; $j < $len_row ; $j++): 
        $char_ran =  char_ran($len_char);
        array_push($array_soup, $char_ran);  
        endfor; 
