@@ -19,7 +19,7 @@
     <body>
     <div class="container"> 
         <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-12">
         <span>len char</span>
         <input type="text" id="len_char">
         <br>
@@ -27,15 +27,40 @@
         <input type="text" id="len_row">
         <br>
         <button id="send" type"button" class="btn btn-primary">send</button>
+            <br>
+            <div id="marc_">
+                <table>
+                    <tr>
+                        <th>horizontales</th>
+                        <th>horizontales invertidas</th>
+                        <th>verticales</th>
+                        <th>verticales invertidas</th>
+                        <th>diagonal superior derecha</th>
+                        <th>diagonal superior izquierda</th>
+                        <th>diagonal inferior derecha</th>
+                        <th>diagonal inferor izquierda</th>
+                    </tr>
+                    <tr>
+                        <td id="h_"></td>
+                        <td id="h_i"></td>
+                        <td id="v_"></td>
+                        <td id="v_i"></td>
+                        <td id="d_u_r"></td>
+                        <td id="d_u_l"></td>
+                        <td id="d_d_r"></td>
+                        <td id="d_d_l"></td>
+                    </tr>
+                </table>
+            </div>            
+                
         </div>
-        <div class="col-md-6"  id="marc_"></div>            
-            
         </div>
-        <br>
+        
+        <br>    
         <span>sopa generada </span>
         <span id="result"></span>
         <br>
-        <div class="jumbotron col-md-8" id="found_"></div>
+        <div id="found_"></div>
         </div>
     </body>
 </html>

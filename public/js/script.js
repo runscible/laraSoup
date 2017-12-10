@@ -1,5 +1,16 @@
 $(document).ready(function () {
     $("#send").on('click', function(){
+        //empty divs 
+        $("#h_").empty(); 
+        $("#h_i").empty();
+        $("#v_").empty();
+        $("#d_u_r").empty();
+        $("#d_u_l").empty();
+        $("#d_d_r").empty();
+        $("#d_d_l").empty();
+        $("#found_").empty();
+
+        
         var len_char = $("#len_char").val();
         var len_row = $("#len_row").val();  
         //var send_soup_data = 'soupArray='+soup_data; 
@@ -20,10 +31,26 @@ $(document).ready(function () {
                     data: 'len_char='+len_char+'&len_row='+len_row, 
                     success: function(data){
                         parsed_data = JSON.parse(data); 
-                        console.log(parsed_data.coincidencias); 
-                        $("#marc_").html(parsed_data.coincidencias); 
-                        $("#found_").html(parsed_data.result); 
+                       
+                        var result_soup = parsed_data.result; 
+                        console.log(parsed_data.coincidencias);
+                        for(var i = 0 ; i < result_soup.length ; i++){
+                            $("#found_").append(result_soup[i]); 
+                            $("#found_").append('<br/>');
+                        } 
+                        $("#h_").html(parsed_data.coincidencias.coincidencias_horizontales);
+                        $("#h_i").html(parsed_data.coincidencias.coincidencias_horizontales_invertidas);
+                        $("#v_").html(parsed_data.coincidencias.coincidencias_verticales);
+                        $("#v_i").html(parsed_data.coincidencias.coincidencias_verticales_invertidas);
+                        $("#d_u_r").html(parsed_data.coincidencias.coincidencias_diagonal_superior_derecha);
+                        $("#d_u_l").html(parsed_data.coincidencias.coincidencias_diagonal_superior_izquierda);
+                        $("#d_d_r").html(parsed_data.coincidencias.coincidencias_diagonal_inferior_derecha);
+                        $("#d_d_l").html(parsed_data.coincidencias.coincidencias_diagonal_inferior_izquierda); 
+                        
+                         
                     }, 
+                    //todo : hacer que se muestre la data en html tal como lo hace en 
+                    // en console log
                     error: function(data){
                         console.log(data); 
                     }

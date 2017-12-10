@@ -65,12 +65,11 @@ html, body {
     height: auto;
     border-style: solid; 
     border-color: rgb(32, 30, 30);  
-    width: 200px; 
     margin: 10px; 
     text-align: center;
-    word-wrap: break-word;
-    text-overflow: ellipsis
-
+    
+    text-overflow: ellipsis; 
+    width: 100%; 
      
 }
 #found_{
@@ -82,4 +81,10 @@ html, body {
 
 *{
     font-color:black; 
+}
+
+td, th{
+    border-style: solid; 
+    border-color: black; 
+    padding: 2px; 
 }
